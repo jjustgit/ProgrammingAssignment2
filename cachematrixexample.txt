@@ -40,7 +40,7 @@
 #       - m <- makeCacheMatrix(matrixX) #running this command creates the object with x set to the passed in matrix which was created in step 3
 # 5. Set matrix to makeCacheMatrix object
 #       - m$set(matrixX) # sets x to matrix created in step 3
-# 6. Solve for the inverse of a matrix (assuming the matrix is indeed invertable)
+# 6. Solve for the inverse of a matrix (assuming the matrix is indeed invertible)
 #       - using our second method, cacheSolve, you will obtain an inverse of the passed in matrix
 #       - i <- cacheSolve(matrixX) #sets i to the inverse of matrixX
 # 7. Now that you have the inverse matrix, you need to pass this to the makeCacheMatrix object
@@ -49,7 +49,7 @@
 #       - m$getinverse
 
 # what this example has demonstrated is that we can create an object and run multiple methods that use stored data
-# in an environment where it was created. These varables are not accessable or modifiable outside of the environment internal 
+# in an environment where it was created. These variables are not accessible or modifiable outside of the environment internal 
 # to the wrapper object created. This allows us to do advanced data manipulation while keeping our code efficient and understandable.
 
 
@@ -61,7 +61,7 @@
 # 
 # Accessor Methods  - get - takes no arguments and returns a function that returns the initial (non-inverted) matrix
 #                   - set - takes a matrix as an argument, setting x to this matrix (if no matrix is passed in the initiation of makeCacheMatrix, you must set it using this accessor method)
-#                   - setinverse - takes a matrix as an argument (calcuated using solve(matrix)), setting this inverted matrix to the variable mi
+#                   - setinverse - takes a matrix as an argument (calculated using solve(matrix)), setting this inverted matrix to the variable mi
 #                   - getinverse - takes no arguments and returns the inverted matrix stored in the variable mi
 #   Examples for using this method can be found above
     
@@ -72,7 +72,7 @@ makeCacheMatrix <- function(initial_matrix = matrix()) {
     # set initial matrix to variable x
     set <- function(m){
         initial_matrix <<- m
-        inverse_matrix <<- NULL #clear (or NULL) inveser matrix in closure
+        inverse_matrix <<- NULL #clear (or NULL) inverse matrix in closure
     }
     
     # get accessor method for inverse of initial matrix
